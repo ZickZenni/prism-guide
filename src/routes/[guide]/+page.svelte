@@ -68,6 +68,7 @@
 		text-decoration: none;
 		font-size: 15px;
 		margin: 3px 0px;
+		margin-left: 10px;
 		color: #ebebf599;
 	}
 
@@ -78,7 +79,7 @@
 
 	.content-wrapper {
 		width: 100%;
-		height: calc(100% - 48px * 2);
+		height: calc(100% - 48px);
 		padding: 48px 32px 0;
 		overflow-y: auto;
 	}
@@ -88,6 +89,7 @@
 		flex-direction: column;
 		width: 100%;
 		max-width: var(--guide-content-max-width);
+		margin-top: 48px;
 		margin-bottom: 48px;
 	}
 
@@ -97,7 +99,7 @@
 		width: 100%;
 		height: 100%;
 		background-color: #1b1b1f;
-		padding: 48px 32px 0;
+		padding: 0 32px;
 	}
 
 	.container-background {
