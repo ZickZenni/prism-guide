@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+	margin: 0;
+	width: 100%;
+	min-width: 320px;
+	min-height: 100vh;
+	line-height: 24px;
+	font-family: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol', 'Noto Color Emoji';
+	font-size: 16px;
+	font-weight: 400;
+	color: rgba(255, 255, 245, 0.86);
+	background-color: #161618;
+	font-synthesis: style;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	letter-spacing: -0.02rem;
+	line-height: 40px;
+	font-size: 32px;
+}
+
+h2 {
+	margin: 48px 0 16px;
+	border-top: 1px solid #2e2e32;
+	padding-top: 24px;
+	letter-spacing: -0.02em;
+	line-height: 32px;
+	font-size: 24px;
+}
+
+h3 {
+	margin: 32px 0 0;
+	letter-spacing: -0.01em;
+	line-height: 28px;
+	font-size: 20px;
+}
+
+p {
+	line-height: 28px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p {
+	overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	position: relative;
+	font-weight: 600;
+	outline: none;
+}
+
+a {
+	font-weight: 500;
+	color: #ffc7a8;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+	transition:
+		color 0.25s,
+		opacity 0.25s;
+}
+
+a:hover {
+	color: #e78e5c;
+}
+
+blockquote {
+	border-left: 2px solid #ffc7a8;
+	margin-left: 0;
+	padding: 1px 20px;
+}
+
+table {
+	border: solid 1px #2e2e32;
+	max-width: max-content;
+	border-collapse: collapse;
+}
+
+thead,
+tr {
+	background-color: #1b1b1f;
+}
+
+th,
+td {
+	padding: 8px 16px;
+	border: 1px solid #2e2e32;
+}
+
+th {
+	font-size: 14px;
+	font-weight: 600;
+	color: #ebebf599;
+	background-color: #202127;
+}
+
+td {
+	font-size: 14px;
+}
+
+pre {
+	padding: 10px;
+	background-color: #161618;
+	overflow-x: auto;
+	border-radius: 12px;
+	font-size: 14px;
+}
+
+img {
+	width: 100%;
+}
