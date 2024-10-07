@@ -14,7 +14,7 @@ export interface GuideLoadResponse {
 	}[];
 }
 
-export const load: Load = ({ params }) => {
+export const load: Load = async ({ params }) => {
 	const { guide } = params;
 
 	if (guide === undefined)
@@ -36,8 +36,7 @@ export const load: Load = ({ params }) => {
 			let content = null;
 
 			if (isVercel) {
-				const guidesPath = resolve(__dirname, '..', '..', '..', '..', 'client', 'guides');
-				content = readFileSync(resolve(guidesPath, g.file), 'utf8');
+				content = await (await fetch(`https://prism.zickzenni.com/guides/${g.file}`)).text();
 			} else {
 				const guidesPath = resolve(__dirname, '..', '..', '..', 'static', 'guides');
 				content = readFileSync(resolve(guidesPath, g.file), 'utf8');
