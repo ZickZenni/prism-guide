@@ -22,10 +22,7 @@ export const load: Load = ({ params }) => {
 			content: null
 		};
 
-	const __filename = fileURLToPath(import.meta.url);
-	const __dirname = dirname(__filename);
-
-	const guidesPath = resolve(__dirname, '..', '..', 'lib', 'guides');
+	const isVercel = process.env.VERCEL === '1' || false;
 
 	let response: GuideLoadResponse = {
 		content: null,
@@ -34,7 +31,18 @@ export const load: Load = ({ params }) => {
 
 	for (const g of GUIDES) {
 		if (g.path === guide) {
-			const content = readFileSync(resolve(guidesPath, g.file), 'utf8');
+			const __filename = fileURLToPath(import.meta.url);
+			const __dirname = dirname(__filename);
+			let content = null;
+
+			if (isVercel) {
+				const guidesPath = resolve(__dirname, '..', '..', '..', '..', 'client', 'guides');
+				content = readFileSync(resolve(guidesPath, g.file), 'utf8');
+			} else {
+				const guidesPath = resolve(__dirname, '..', '..', '..', 'static', 'guides');
+				content = readFileSync(resolve(guidesPath, g.file), 'utf8');
+			}
+
 			response = {
 				content,
 				path: g.path,
