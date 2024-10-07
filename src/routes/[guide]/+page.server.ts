@@ -25,7 +25,7 @@ export const load: Load = ({ params }) => {
 	const __filename = fileURLToPath(import.meta.url);
 	const __dirname = dirname(__filename);
 
-	const guidesPath = resolve(__dirname, '..', '..', 'guides');
+	const guidesPath = resolve(__dirname, '..', '..', 'lib', 'guides');
 
 	let response: GuideLoadResponse = {
 		content: null,
